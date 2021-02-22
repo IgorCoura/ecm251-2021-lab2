@@ -10,4 +10,3 @@ Repositório criado para a disciplina Linguagens de Programação l.
 - Java
 - Python
 - C
-"S
