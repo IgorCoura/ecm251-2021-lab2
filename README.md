@@ -2,8 +2,8 @@
 Repositório criado para a disciplina Linguagens de Programação l.
 
 # Desenvolvedor:
-## Igor de Brito Coura
-
+- Igor de Brito Coura
+[comment]: <> (Comentário no Markdown)
 # Linguagens e Frameworks:
 - Java
 - Python
