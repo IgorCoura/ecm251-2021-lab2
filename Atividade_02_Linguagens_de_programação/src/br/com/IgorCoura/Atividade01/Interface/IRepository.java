@@ -8,4 +8,5 @@ public interface IRepository {
     void insert(MembersSociety member);
     void delete(MembersSociety member);
     List<MembersSociety> selectList();
+    MembersSociety select(int id);
 }
