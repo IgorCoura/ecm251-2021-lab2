@@ -33,4 +33,13 @@ public class Service {
         return repository.selectList();
     }
 
+    public MembersSociety recoverMember(int id){
+        return repository.select(id);
+    }
+
+    public void RemoveByID(int id){
+        var member = repository.select(id);
+        repository.delete(member);
+    }
+
 }
