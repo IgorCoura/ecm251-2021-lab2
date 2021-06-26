@@ -4,6 +4,7 @@ import br.com.IgorCoura.Atividade01.Enum.Cargos;
 import br.com.IgorCoura.Atividade01.Enum.Horarios;
 
 public class MembersSociety {
+    private int id;
     private String nome;
     private String email;
     private Cargos cargo;
@@ -12,6 +13,13 @@ public class MembersSociety {
         this.nome = nome;
         this.email = email;
         this.cargo = cargo;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    public int getId() {
+        return id;
     }
 
     public String getMessage(Horarios horario){
@@ -23,7 +31,7 @@ public class MembersSociety {
     }
 
     public String getDescription(Horarios horario){
-        return nome + " "+ email + " "+ cargo.toString() + " "+ getMessage(horario);
+        return "Id: "+id + " - Nome: " + nome + " - Email: "+ email + " - Cargo: "+ cargo.toString() + " - Horario de Trabalho: "+ horario +" - Mensagem: "+ getMessage(horario);
     }
 
 }
