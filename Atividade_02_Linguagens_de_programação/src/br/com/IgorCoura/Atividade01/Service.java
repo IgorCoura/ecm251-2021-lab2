@@ -1,8 +1,36 @@
 package br.com.IgorCoura.Atividade01;
 
+import br.com.IgorCoura.Atividade01.Enum.Cargos;
+import br.com.IgorCoura.Atividade01.Enum.Horarios;
+import br.com.IgorCoura.Atividade01.Interface.IRepository;
+
+import java.util.List;
+
 public class Service {
+
+    private Horarios horarios = Horarios.Normal;
+    private IRepository repository;
+
+
+    public Service(Repository repository){
+        this.repository = repository;
+    }
+
+    public void setHorarios(Horarios horarios) {
+        this.horarios = horarios;
+    }
+
+    public Horarios getHorarios() {
+        return horarios;
+    }
+
     public void createMember(String nome, String email, Cargos cargo){
         MembersSociety member = new MembersSociety(nome, email, cargo);
-
+        repository.insert(member);
     }
+
+    public List<MembersSociety> listMembers(){
+        return repository.selectList();
+    }
+
 }
