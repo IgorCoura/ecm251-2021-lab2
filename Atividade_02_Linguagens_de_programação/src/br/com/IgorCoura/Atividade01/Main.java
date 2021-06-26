@@ -2,19 +2,27 @@ package br.com.IgorCoura.Atividade01;
 
 import br.com.IgorCoura.Atividade01.Enum.Cargos;
 import br.com.IgorCoura.Atividade01.Enum.Horarios;
+import br.com.IgorCoura.Atividade01.Interface.IService;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.sql.SQLOutput;
+
+/**
+ * @author Igor de Brito Coura 19.00165-7
+ */
 
 public class Main {
-    private static Service service = new Service(new Repository());
+    private static IService service = new Service(new RepositoryLsit());
     private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
     public static void main(String[] args) {
+        var rep = new Repository();
         try{
-            displayMain();
+            var m1 = new MembersSociety("Jojo", "Jojo@gmail", Cargos.MobileMembers);
+            var m2 = new MembersSociety("Tata", "tata@gmail", Cargos.HeavyLifters);
+            rep.insert(m1);
+            rep.insert(m2);
         }
         catch (Exception e){
             System.out.println(e.getMessage());
@@ -33,6 +41,8 @@ public class Main {
             System.out.println("3 - Excluir membro");
             System.out.println("4 - Consultar membro");
             System.out.println("5 - Trocar horario de trabalho");
+            System.out.println("6 - Postar mensagem");
+            System.out.println("7 - Postar todas as mensagens");
             System.out.println("0 - Sair");
             String op = br.readLine();
             switch (op){
@@ -45,7 +55,11 @@ public class Main {
                 case "4": displayConsultarMembro();
                     break;
                 case "5": displayTrocarHorario();
-                break;
+                    break;
+                case "6": displayPostarMensagem();
+                    break;
+                case "7": displayPostarTodasMensagens();
+                    break;
                 default:
                     loop = false;
             }
@@ -87,13 +101,15 @@ public class Main {
     }
 
     public static void displayExcluir() throws IOException {
-        System.out.println("\nDigite o id do membro que deseja deletar: ");
+        System.out.println("\nExcluir membro.\n");
+        System.out.println("Digite o id do membro que deseja deletar: ");
         var id = Integer.parseInt(br.readLine());
         service.RemoveByID(id);
         System.out.println();
     }
 
     public static void displayConsultarMembro() throws IOException {
+        System.out.println("\nConsultar Membro.");
         System.out.println("\nDigite o id do membro: ");
         var id = Integer.parseInt(br.readLine());
         var member = service.recoverMember(id);
@@ -102,6 +118,7 @@ public class Main {
     }
 
     public static void displayTrocarHorario() throws IOException {
+        System.out.printf("\nTrocar Horario.");
         var horario = Horarios.Normal;
         System.out.println("\ndefault - Normal, 1 - Extra");
         System.out.println("Trocar horario para: ");
@@ -116,6 +133,24 @@ public class Main {
             service.setHorarios(horario);
             System.out.println();
         }
+    }
+
+    public static void displayPostarMensagem() throws IOException {
+        System.out.println("\nPostar mensagem.");
+        System.out.println("\nDigite o id do membro: ");
+        var id = Integer.parseInt(br.readLine());
+        var member = service.recoverMember(id);
+        member.postMessage(service.getHorarios());
+        System.out.println();
+    }
+
+    public static void displayPostarTodasMensagens(){
+        System.out.println("\nPostar todas as mensagens:");
+        var list = service.listMembers();
+        for (var m: list) {
+            m.postMessage(service.getHorarios());
+        }
+        System.out.println();
     }
 
 }
