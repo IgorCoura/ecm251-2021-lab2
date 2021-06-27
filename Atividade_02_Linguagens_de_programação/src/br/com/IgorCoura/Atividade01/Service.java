@@ -13,6 +13,7 @@ public class Service implements IService {
     private IRepository repository;
 
     /**
+     * @author Igor de Brito Coura 19.00165-7
      * Este contrutor recebe um repository onde os dados serão salvo e cunsultados.
      * @param repository
      */
@@ -21,6 +22,7 @@ public class Service implements IService {
     }
 
     /**
+     * @author Igor de Brito Coura 19.00165-7
      * Este metodo muda o horario de trabalho dos membros.
      * @param horario Horarios - horario para qual será alterando.
      */
@@ -29,6 +31,7 @@ public class Service implements IService {
     }
 
     /**
+     * @author Igor de Brito Coura 19.00165-7
      * Este metodo returna o atual horario de trabalho dos membros.
      * @return Horarios - horarios atual de trabalho.
      */
@@ -37,6 +40,7 @@ public class Service implements IService {
     }
 
     /**
+     * @author Igor de Brito Coura 19.00165-7
      * Este metodo cria um novo membro e inseri no repository.
      * @param nome String - Nome do membro.
      * @param email String - Email do membro.
@@ -48,6 +52,7 @@ public class Service implements IService {
     }
 
     /**
+     * @author Igor de Brito Coura 19.00165-7
      * Este metodo busca todos os membros cadastrados no repository.
      * @return List<MembersSociety> - Lista dos membros da sociedade.
      */
@@ -56,6 +61,7 @@ public class Service implements IService {
     }
 
     /**
+     * @author Igor de Brito Coura 19.00165-7
      * Este metodo busca um membro no repository atraves do seu id.
      * @param id int - id do membro o qual deseja buscar
      * @return MembersSociety - membro da sociedade.
@@ -65,6 +71,7 @@ public class Service implements IService {
     }
 
     /**
+     * @author Igor de Brito Coura 19.00165-7
      * Este metodo remove um membro do repository atraves do seu id.
      * @param id int - Id do membro o qual sera removido.
      */

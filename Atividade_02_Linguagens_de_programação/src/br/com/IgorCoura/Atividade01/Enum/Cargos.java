@@ -2,6 +2,7 @@ package br.com.IgorCoura.Atividade01.Enum;
 
 public enum Cargos  {
     /**
+     * @author Igor de Brito Coura 19.00165-7
      * Cargos possiveis no sociedade.
      */
     MobileMembers("Happy Coding!", "Happy_C0d1ng. Maskers"),
@@ -18,6 +19,7 @@ public enum Cargos  {
     }
 
     /**
+     * @author Igor de Brito Coura 19.00165-7
      * este metodo returna a messagem do cargo em horario norma de trabalho.
      * @return String - mensagens horarios normal de trabalho.
      */
@@ -26,6 +28,7 @@ public enum Cargos  {
     }
 
     /**
+     * @author Igor de Brito Coura 19.00165-7
      * este metodo returna a messagem do cargo em horario extra de trabalho.
      * @return String - mensagens horarios extra de trabalho.
      */

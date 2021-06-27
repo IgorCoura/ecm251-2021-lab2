@@ -108,13 +108,8 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/br/com/IgorCoura/Atividade01/Service.java</url>
-          <line>71</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/br/com/IgorCoura/Atividade01/Main.java</url>
-          <line>115</line>
+          <line>123</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>

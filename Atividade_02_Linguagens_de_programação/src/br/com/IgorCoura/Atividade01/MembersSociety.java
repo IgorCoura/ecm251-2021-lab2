@@ -12,6 +12,7 @@ public class MembersSociety implements IPostarMensagem, IApresentacao {
     private Cargos cargo;
 
     /**
+     * @author Igor de Brito Coura 19.00165-7
      * Cria um novo membro com todos os parametros.
      * @param id int - id do membro
      * @param nome String - Nome do membro
@@ -26,6 +27,7 @@ public class MembersSociety implements IPostarMensagem, IApresentacao {
     }
 
     /**
+     * @author Igor de Brito Coura 19.00165-7
      * Metodo responsavel por mudar o id do membro.
      * @param id int - Novo id do membro.
      */
@@ -34,6 +36,7 @@ public class MembersSociety implements IPostarMensagem, IApresentacao {
     }
 
     /**
+     * @author Igor de Brito Coura 19.00165-7
      * Este metodo devolve o atual id do membro.
      * @return id int - Id do membro.
      */
@@ -42,6 +45,7 @@ public class MembersSociety implements IPostarMensagem, IApresentacao {
     }
 
     /**
+     * @author Igor de Brito Coura 19.00165-7
      * Este metodo devolve o assinatura atual de trabalha de acordo com o horario passado.
      * @param horario Horarios - horarios de trabalho.
      * @return
@@ -54,6 +58,7 @@ public class MembersSociety implements IPostarMensagem, IApresentacao {
         }
     }
     /**
+     * @author Igor de Brito Coura 19.00165-7
      * Este metodo devolve o post atual de trabalha de acordo com o horario passado.
      * @param horario Horarios - horarios de trabalho.
      * @return
@@ -64,6 +69,7 @@ public class MembersSociety implements IPostarMensagem, IApresentacao {
     }
 
     /**
+     * @author Igor de Brito Coura 19.00165-7
      * Este metodo devolve um descricao completa do membro com id, nome, email, cargo, horarios de trabalho e mensagem
      * de acordo com o horarios passado como parametro.
      * @param horario Horarios - horario de trabalho.
@@ -74,6 +80,7 @@ public class MembersSociety implements IPostarMensagem, IApresentacao {
     }
 
     /**
+     * @author Igor de Brito Coura 19.00165-7
      * Este metodo devolve todas as informacoes do membro em um formato para ser inserido em um arquivo CSV.
      * @return String - Informacoes do membro em formato csv.
      */

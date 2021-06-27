@@ -27,6 +27,7 @@ public class Main {
     }
 
     /**
+     * @author Igor de Brito Coura 19.00165-7
      * Metodo resposavel por mostra as opcoes possiveis no console.
      * @throws IOException
      * @throws InterruptedException
@@ -70,6 +71,7 @@ public class Main {
 
 
     /**
+     * @author Igor de Brito Coura 19.00165-7
      * Metodo resposavel por lista os membros no console.
      * @throws IOException
      * @throws InterruptedException
@@ -83,6 +85,11 @@ public class Main {
         System.out.println();
     }
 
+    /**
+     * @author Igor de Brito Coura 19.00165-7
+     * Metodo reposavel cria um display para criar novos membros via console.
+     * @throws IOException
+     */
     public static void displayCadastro() throws IOException {
         System.out.println("\nCadastro de membros. \n");
         System.out.println("Nome: ");
@@ -106,6 +113,7 @@ public class Main {
     }
 
     /**
+     * @author Igor de Brito Coura 19.00165-7
      * Metodo reposavel cria um display para deletar um membro via console.
      * @throws IOException
      */
@@ -118,6 +126,7 @@ public class Main {
     }
 
     /**
+     * @author Igor de Brito Coura 19.00165-7
      * Metodo reposavel cria um display para consultar um membro via console.
      * @throws IOException
      */
@@ -131,6 +140,7 @@ public class Main {
     }
 
     /**
+     * @author Igor de Brito Coura 19.00165-7
      * Metodo reposavel cria um display para Trocar o horario de trabalho via console.
      * @throws IOException
      */
@@ -153,6 +163,7 @@ public class Main {
     }
 
     /**
+     * @author Igor de Brito Coura 19.00165-7
      * Metodo reposavel cria o display para Postar a mensagem de um membro via console.
      * @throws IOException
      */
@@ -166,6 +177,7 @@ public class Main {
     }
 
     /**
+     * @author Igor de Brito Coura 19.00165-7
      * Metodo reposavel cria o display para Postar todas mensagens de todos membro via console.
      * @throws IOException
      */
