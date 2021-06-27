@@ -9,8 +9,14 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Repository implements IRepository {
+    /**
+     * Arquivo onde todos os dados serão salvos e consultados.
+     */
     private File file = new File("arquivo_super_Secreto_nao_abrir.csv");
 
+    /**
+     * Construtor verifica se já existe um arquivo, caso não exista ele cria um.
+     */
     Repository(){
         try {
             if(!file.exists()){
@@ -20,9 +26,12 @@ public class Repository implements IRepository {
         catch (Exception e){
             e.printStackTrace();
         }
-
     }
 
+    /**
+     * Este metodo inseri no arquivo um membro novo.
+     * @param member MembersSociety - Membro o qual sera inserido no arquivo.
+     */
     public void insert(MembersSociety member) {
         member.setId(getId());
         try{
@@ -37,7 +46,10 @@ public class Repository implements IRepository {
         }
     }
 
-
+    /**
+     * Este metodo deleta do arquivo o membro o qual foi enviado como parametro.
+     * @param member MembersSociety - Membro que sera deletado.
+     */
     public void delete(MembersSociety member) {
         try{
             File tempFile = new File("tempFile.csv");
@@ -66,7 +78,10 @@ public class Repository implements IRepository {
 
     }
 
-
+    /**
+     * Este membro busca todos os membro no arquivo e returna como um List<MembersSociety>.
+     * @return List<MembersSociety> - Lista de todos os membros presente no arquivo.
+     */
     public List<MembersSociety> selectList() {
         List<MembersSociety> list = new ArrayList<MembersSociety>();
         try{
@@ -83,7 +98,11 @@ public class Repository implements IRepository {
         return list;
     }
 
-
+    /**
+     * Este metodo busca no arquivo por id o membro desejado e returna como um objeto MembersSociety.
+     * @param id int - Id do membro que deseja buscar.
+     * @return MembersSociety - Membro buscado.
+     */
     public MembersSociety select(int id) {
         MembersSociety resp = null;
         try{
@@ -103,6 +122,10 @@ public class Repository implements IRepository {
         return resp;
     }
 
+    /**
+     * Este membro returna um id disponivel para um novo membro.
+     * @return id int - Id para um novo membro.
+     */
     public int getId(){
         try{
             Scanner scanner = new Scanner(file);
