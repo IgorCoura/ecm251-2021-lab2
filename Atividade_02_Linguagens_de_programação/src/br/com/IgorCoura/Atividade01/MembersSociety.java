@@ -11,7 +11,8 @@ public class MembersSociety implements IPostarMensagem, IApresentacao {
     private String email;
     private Cargos cargo;
 
-    public MembersSociety(String nome, String email, Cargos cargo){
+    public MembersSociety(int id, String nome, String email, Cargos cargo){
+        this.id = id;
         this.nome = nome;
         this.email = email;
         this.cargo = cargo;
@@ -42,7 +43,7 @@ public class MembersSociety implements IPostarMensagem, IApresentacao {
     }
 
     public String toCSV(){
-        return id+";"+nome+";"+email+";"+cargo.getId();
+        return id+";"+nome+";"+email+";"+cargo;
     }
 
 }

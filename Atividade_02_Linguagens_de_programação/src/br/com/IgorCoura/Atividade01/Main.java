@@ -13,16 +13,12 @@ import java.io.InputStreamReader;
  */
 
 public class Main {
-    private static IService service = new Service(new RepositoryLsit());
+    private static IService service = new Service(new Repository());
     private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
     public static void main(String[] args) {
-        var rep = new Repository();
         try{
-            var m1 = new MembersSociety("Jojo", "Jojo@gmail", Cargos.MobileMembers);
-            var m2 = new MembersSociety("Tata", "tata@gmail", Cargos.HeavyLifters);
-            rep.insert(m1);
-            rep.insert(m2);
+            displayMain();
         }
         catch (Exception e){
             System.out.println(e.getMessage());

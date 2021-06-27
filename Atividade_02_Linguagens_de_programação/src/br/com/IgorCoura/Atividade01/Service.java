@@ -25,7 +25,7 @@ public class Service implements IService {
     }
 
     public void createMember(String nome, String email, Cargos cargo){
-        MembersSociety member = new MembersSociety(nome, email, cargo);
+        MembersSociety member = new MembersSociety(0, nome, email, cargo);
         repository.insert(member);
     }
 
