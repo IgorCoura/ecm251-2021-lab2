@@ -10,6 +10,7 @@ import java.io.InputStreamReader;
 
 /**
  * @author Igor de Brito Coura 19.00165-7
+ * @link https://github.com/IgorCoura/ecm251-2021-lab2/tree/main/Atividade_02_Linguagens_de_programa%C3%A7%C3%A3o
  */
 
 public class Main {
