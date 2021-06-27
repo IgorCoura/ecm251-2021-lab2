@@ -26,6 +26,11 @@ public class Main {
 
     }
 
+    /**
+     * Metodo resposavel por mostra as opcoes possiveis no console.
+     * @throws IOException
+     * @throws InterruptedException
+     */
     public static void displayMain() throws IOException, InterruptedException {
         boolean loop = true;
         while(loop){
@@ -64,7 +69,11 @@ public class Main {
     }
 
 
-
+    /**
+     * Metodo resposavel por lista os membros no console.
+     * @throws IOException
+     * @throws InterruptedException
+     */
     public static void diplayListarMembros() throws IOException, InterruptedException {
         var list = service.listMembers();
         System.out.println("\nLista de Membros: ");
@@ -96,6 +105,10 @@ public class Main {
         System.out.println();
     }
 
+    /**
+     * Metodo reposavel cria um display para deletar um membro via console.
+     * @throws IOException
+     */
     public static void displayExcluir() throws IOException {
         System.out.println("\nExcluir membro.\n");
         System.out.println("Digite o id do membro que deseja deletar: ");
@@ -104,6 +117,10 @@ public class Main {
         System.out.println();
     }
 
+    /**
+     * Metodo reposavel cria um display para consultar um membro via console.
+     * @throws IOException
+     */
     public static void displayConsultarMembro() throws IOException {
         System.out.println("\nConsultar Membro.");
         System.out.println("\nDigite o id do membro: ");
@@ -113,6 +130,10 @@ public class Main {
         System.out.println();
     }
 
+    /**
+     * Metodo reposavel cria um display para Trocar o horario de trabalho via console.
+     * @throws IOException
+     */
     public static void displayTrocarHorario() throws IOException {
         System.out.printf("\nTrocar Horario.");
         var horario = Horarios.Normal;
@@ -131,6 +152,10 @@ public class Main {
         }
     }
 
+    /**
+     * Metodo reposavel cria o display para Postar a mensagem de um membro via console.
+     * @throws IOException
+     */
     public static void displayPostarMensagem() throws IOException {
         System.out.println("\nPostar mensagem.");
         System.out.println("\nDigite o id do membro: ");
@@ -140,6 +165,10 @@ public class Main {
         System.out.println();
     }
 
+    /**
+     * Metodo reposavel cria o display para Postar todas mensagens de todos membro via console.
+     * @throws IOException
+     */
     public static void displayPostarTodasMensagens(){
         System.out.println("\nPostar todas as mensagens:");
         var list = service.listMembers();
